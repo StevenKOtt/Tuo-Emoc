@@ -1,3 +1,56 @@
 h1 {
     color: red;
 }
+
+
+/* HEADER */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li{
+    display: inline;
+    margin-left: 15px;
+}
+
+header .container {
+    background-color: lightblue;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.logo{
+    width: 20%;
+}
+
+nav {
+    margin-top: 3%;
+}
+
+#quote {
+    margin-top: 3%;
+}
+/* //////// */
+
+/* //Home// */
+.aboutTuo {
+    font-size: 20px;
+    padding: 2%;
+    background-color: lightpink;
+    margin-top: 2%;
+    border-radius: 4px;
+}
+.section {
+    font-size: 15px;
+    margin-top: 2%;
+    background-color: lightgrey;
+    padding: 2%;
+    border-radius: 4px;
+}
+
+.section h3 {
+    font-size: 30px;
+}

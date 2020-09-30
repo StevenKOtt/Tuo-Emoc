@@ -6,12 +6,12 @@
 
 - Environment Files are in a .env, create with your env variables. Here are some needed variables for this template to get you started. You can rename template.env into .env to get started.
 
-```
+
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/
 DB_NAME=myDatabase
 SECRET=cheese
-```
+
 
 ## Commands
 

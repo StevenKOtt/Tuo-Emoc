@@ -21,12 +21,12 @@ class inLayout extends React.Component {
             <div className ="row">
               <img src= "/img/logo.png" className ="col-sm, logo"></img>
               <div className ="col-sm" id="quote"><i>Be free!</i></div>
-              <nav className="col-md" >
+              <nav className="col-sm" >
                     <ul>
-                    <li><a href="/auth/login">Home</a></li>
-                    <li><a href="/auth/signup">Forums</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Account</a></li>
+                    <li><a href="/forums">Forums</a></li>
                     <li><a href="/auth/login">Resources</a></li>
-                    <li><a href="/auth/login">Contact-Us</a></li>
                     </ul>
               </nav>
             </div>

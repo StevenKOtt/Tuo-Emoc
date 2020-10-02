@@ -2,9 +2,11 @@
 // DEPENDENCIES
 /////////////////////////////////
 const { Router } = require("express");
-const comingOut = require("../../models/schemas/comingOut");
+const session = require("express-session");
+const comingOut = require("../../models/schemas/comingOut.js");
+const closetedIn = require("../../models/schemas/closetedIn.js");
 const auth = require("../authmiddleware");
-// const seed = require("../../models/seed/comingOut.js")
+//const seed = require("../../models/seed/comingOut.js")
 ///////////////////////////////////////
 // CREATE ROUTER
 ///////////////////////////////////////
@@ -20,12 +22,37 @@ const router = Router();
 //TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
 
 router.get("/", auth, (req, res) => {
+
   res.render("signedin/home.jsx");
 });
 
-router.get("/Forums", auth, (req, res) => {
-  res.render("signedin/forums.jsx");
+//Forum Page
+router.get("/forum", auth, (req, res) => {
+  comingOut.find({}, (error, comingout) => {
+    closetedIn.find({}, (error, closetedin) => {
+      res.render("signedin/forums.jsx", {comingout,closetedin});
+    })
 });
+})
+
+//Forum Create Page
+router.get("/forum/new/", auth, (req, res) => {
+  res.render("signedin/create.jsx");
+
+});
+router.post("/forum", auth, (req, res) => {
+  if(req.body.forumType == "comingOut") {
+      console.log(req.body)
+      req.body.user = req.session.username
+      comingOut.create(req.body, (error, newForum) => {
+      res.redirect("/forum"); })} 
+  else {
+    res.redirect("/forum")
+  }
+})
+
+
+
 
 
 ///////////////////////////////////////

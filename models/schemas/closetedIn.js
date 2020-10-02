@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const comingoutSchema = new mongoose.Schema({
+const closetedInSchema = new mongoose.Schema({
 
   user: {type: String, required: true },
   subject: {type: String, required: true },
@@ -11,8 +11,7 @@ const comingoutSchema = new mongoose.Schema({
 },
 { timestamps: { createdAt: 'created_at' }});
 
-const comingOut = mongoose.model('Coming_Out', comingoutSchema);
+const closetedIn = mongoose.model('closeted_In', closetedInSchema);
 
-module.exports = comingOut;
-
+module.exports = closetedIn;
 

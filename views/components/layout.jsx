@@ -32,7 +32,7 @@ class Layout extends React.Component {
           </header>
           <main>{this.props.children}</main>
           <footer>
-            <h1>This is my footer</h1>
+           
           </footer>
         </body>
       </html>

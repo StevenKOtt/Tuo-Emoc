@@ -51,7 +51,15 @@ router.post("/forum", auth, (req, res) => {
   }
 })
 
-
+//Show coming out Forum Page
+router.get("/forum/co/:id", auth, (req, res) => {
+  comingOut.findById(req.params.id, (error, individual) => {
+  res.render("signedin/forumPostco.jsx", { 
+      aPost: individual,
+      index: req.params.id}
+      )
+  })
+})
 
 
 

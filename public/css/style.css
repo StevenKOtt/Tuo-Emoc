@@ -2,7 +2,10 @@ h1 {
     color: red;
 }
 
-
+body {
+    background-color: #edc7b7;
+    font-family: 'Lato
+}
 /* HEADER */
 
 ul {
@@ -17,9 +20,9 @@ li{
 }
 
 header .container {
-    background-image: url("../img/pride.jpg");
+    background-image: linear-gradient(#edc7b7, #eee2DC);
     width: 100%;
-    border-radius: 5px;
+    
 }
 
 .logo{
@@ -27,12 +30,9 @@ header .container {
 }
 
 nav {
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
-#quote {
-    margin-top: 3%;
-}
 /* //////// */
 
 /* //Home// */
@@ -65,7 +65,7 @@ nav {
     
 }
 
-#newComingOut {
+#submit-post {
     margin-top: 3%;
 }
 
@@ -84,4 +84,39 @@ nav {
 hr {
     border-top: dotted 1px;
     margin-bottom: -1%;
+}
+
+
+/* Forum Post */
+
+#postSubject {
+    text-align: left;
+}
+#bodyField {
+    background-color: white;
+    padding: 2%;
+    border: black;
+    border-style: dashed;
+}
+#postInfoFull {
+    margin-top: 3%;
+
+}
+#userInfo {
+    color: white;
+    background-color: #123C69;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#postInfo {
+    background-color: #BAB2B5;
+    margin-right: 2%;
+    border: #ac3B61;
+    border-style: dashed;
+}
+#profileIcon {
+    margin-top: 4%;
+    width: 30%;
+    border-radius: 50%;
 }

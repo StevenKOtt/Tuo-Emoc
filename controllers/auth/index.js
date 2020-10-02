@@ -26,7 +26,7 @@ router.post("/signup", async (req, res) => {
   // SAVE NEW USER IN DB
   const newUser = await User.create(req.body);
   // Redirect to login page
-  res.redirect("/auth/login");
+  res.redirect("/login");
 });
 
 // LOGIN PAGE
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
       //SAVE INFO IN SESSION THAT USER IS LOGGEDIN AND USERNAME
       req.session.login = true;
       req.session.username = user[0].username;
-      res.redirect("/");
+      res.redirect("http://localhost:5000/home");
     } else {
       // Redirect to login page if failed
       res.render("auth/fail.jsx");
@@ -61,7 +61,7 @@ router.post("/login", async (req, res) => {
 //LOGOUT
 router.get("/logout", (req, res) => {
   req.session.destroy();
-  res.redirect("/");
+  res.redirect("/auth/login");
 });
 
 ///////////////////////////////////////

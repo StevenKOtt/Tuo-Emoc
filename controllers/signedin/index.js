@@ -21,7 +21,7 @@ const router = Router();
 // });
 //TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
 
-router.get("/", auth, (req, res) => {
+router.get("/home", auth, (req, res) => {
 
   res.render("signedin/home.jsx");
 });

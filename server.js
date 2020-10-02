@@ -55,9 +55,8 @@ app.use(morgan("tiny")); //logging
 ///////////////
 //Routes and Routers
 //////////////
-
-app.use("/auth", authRouter);
 app.use("/", signedRouter);
+app.use("/auth", authRouter);
 
 ////////////////////////
 //APP LISTENER

@@ -41,17 +41,18 @@ router.get("/forum/new/", auth, (req, res) => {
 
 });
 router.post("/forum", auth, (req, res) => {
+  req.body.user = req.session.username
   if(req.body.forumType == "comingOut") {
-      console.log(req.body)
-      req.body.user = req.session.username
       comingOut.create(req.body, (error, newForum) => {
       res.redirect("/forum"); })} 
   else {
-    res.redirect("/forum")
-  }
+      closetedIn.create(req.body, (error, newForum) => {
+      res.redirect("/forum"); })}
+  
 })
-
+//---------------
 //Show coming out Forum Page
+
 router.get("/forum/co/:id", auth, (req, res) => {
   comingOut.findById(req.params.id, (error, individual) => {
   res.render("signedin/forumPostco.jsx", { 
@@ -61,6 +62,30 @@ router.get("/forum/co/:id", auth, (req, res) => {
   })
 })
 
+//posting comment on coming out page
+router.post("/forum/co/:id", auth, (req, res) => {
+  comingOut.findByIdAndUpdate(req.params.id, {$push: {comments: { body: req.body.body, user: req.session.username, commentDate: Date()}}}, (error, individual) => {
+      res.redirect(`/forum/co/${req.params.id}`)
+  })
+})
+//-------------------------------
+//Show closeted in Forum Page
+
+router.get("/forum/ci/:id", auth, (req, res) => {
+  closetedIn.findById(req.params.id, (error, individual) => {
+  res.render("signedin/forumPostci.jsx", { 
+      aPost: individual,
+      index: req.params.id}
+      )
+  })
+})
+
+//posting comment on coming out page
+router.post("/forum/ci/:id", auth, (req, res) => {
+  closetedIn.findByIdAndUpdate(req.params.id, {$push: {comments: { body: req.body.body, user: req.session.username, commentDate: Date()}}}, (error, individual) => {
+      res.redirect(`/forum/ci/${req.params.id}`)
+  })
+})
 
 
 ///////////////////////////////////////

@@ -1,7 +1,7 @@
 const React = require("react");
 const Signed = require("../components/Signed.jsx");
 
-class forumPostco extends React.Component {
+class forumPostci extends React.Component {
   render() {
     const {aPost, index} = this.props
     return (
@@ -89,7 +89,7 @@ class forumPostco extends React.Component {
             </div>   
             <div className = "row">
             <div className = "col-7">
-                    <form action={`/forum/co/${index}`} method="POST">
+                    <form action={`/forum/ci/${index}`} method="POST">
                         <div className="form-group">
                         <textarea className="form-control" id="body" name="body" placeholder="comment here" rows="4"></textarea>
                         </div>
@@ -101,4 +101,4 @@ class forumPostco extends React.Component {
         </Signed>
     )}
     }
-module.exports = forumPostco
+module.exports = forumPostci

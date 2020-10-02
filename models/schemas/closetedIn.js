@@ -5,7 +5,7 @@ const closetedInSchema = new mongoose.Schema({
   user: {type: String, required: true },
   subject: {type: String, required: true },
   body: {type: String, required: true },
-  comments: {type: Number, default: 0 },
+  comments: [{ body: String, user: String, commentDate: Date }],
   identity: {type: String, required: true },
   age: {type: Number, required: false}
 },

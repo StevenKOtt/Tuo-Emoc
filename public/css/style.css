@@ -120,3 +120,9 @@ hr {
     width: 30%;
     border-radius: 50%;
 }
+
+/*  Comments */
+
+.aComment {
+    background-color: white;
+}

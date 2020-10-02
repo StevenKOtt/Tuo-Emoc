@@ -35,6 +35,9 @@ class inLayout extends React.Component {
       <li className="nav-item">
         <a className="nav-link" href="/">Resources</a>
       </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/auth/logout">Log-out</a>
+      </li>
     </ul>
   </div>
 </nav> 

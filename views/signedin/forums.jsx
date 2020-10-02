@@ -110,7 +110,7 @@ class Forum extends React.Component {
                                     return (
                                         <tr>
                                             <td><a href = {`/forum/co/${item._id}`}>{item.subject}</a></td>
-                                            <td>{item.comments}</td>
+                                            <td>{item.comments.length}</td>
                                             <td>{item.identity}</td>
                                         </tr>
                                     )})}
@@ -141,7 +141,7 @@ class Forum extends React.Component {
                                     return (
                                         <tr>
                                             <td><a href = {`/forum/ci/${item._id}`}>{item.subject}</a></td>
-                                            <td>{item.comments}</td>
+                                            <td>{item.comments.length}</td>
                                             <td>{item.identity}</td>
                                         </tr>
                                     )})}

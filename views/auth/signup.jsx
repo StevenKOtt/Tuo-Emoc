@@ -41,7 +41,7 @@ class Index extends React.Component {
                         <textarea className="form-control" name="aboutMe" id="aboutMe" placeholder="Type a little about you if you'd like" name="aboutMe" rows="4"></textarea>
                     </div>   
                 </div>
-                  <button type="submit" className="btn btn-primary">Sign in</button>
+                  <button type="submit" className="btn btn-success">Sign up</button>
               </form>
             </div>
           </div>

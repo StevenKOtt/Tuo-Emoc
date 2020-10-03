@@ -18,47 +18,52 @@ class Account extends React.Component {
             <div className = "row">
                 {/* Account Info */}
                 <div className = "col-4 sectionShadow" id="accountInfo">
-                <div id="roq">
-
-                    <div className = "row">
-                        <div classSName = "col">
-                            <div className ="headerInfo">
+                        <div className ="col">
+                            <div className ="row">
+                                <div classSName = "col">
+                                <div className ="headerInfo">
                                 Info
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className = "row">
-                        <div classSName = "col">
-                            <div className = "info">
+                            <div className = "row">
+                                <div classSName = "col">
+                                 <div className = "info">
                                 Username: <br></br>{userInfo[0].username}
                             </div>
-                        </div>
-                    </div>
 
-                    <div className = "row">
-                        <div classSName = "col">
-                            <div className = "info">
-                                Age: <br></br>{userInfo[0].age}
+
+                            <div className = "row">
+                                <div classSName = "col">
+                                    <div className = "info">
+                                        Age: <br></br>{userInfo[0].age}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className = "row">
+                                <div classSName = "col">
+                                    <div className = "info">
+                                        Identity: <br></br>{userInfo[0].identity}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className = "row">
+                                <div className = "col">
+                                    <div className = "info">
+                                        AboutMe: <br></br><br></br>{userInfo[0].aboutMe}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div className = "row">
-                        <div classSName = "col">
-                            <div className = "info">
-                                Identity: <br></br>{userInfo[0].identity}
-                            </div>
-                        </div>
+                    
                     </div>
 
-                    <div className = "row">
-                        <div className = "col">
-                            <div className = "info">
-                                AboutMe: <br></br><br></br>{userInfo[0].aboutMe}
-                            </div>
-                        </div>
-                    </div>
+                    
+
+                    
+
                     
                 </div>
                 </div>
@@ -121,8 +126,9 @@ class Account extends React.Component {
                                                     <label for="body">Body</label>
                                                     <textarea className="form-control" id="body" name="body" rows="4" value={item.body}></textarea>
                                                 </div>   
+                                                <button type="submit" class="btn btn-info">Submit Edit</button>
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Submit Edits</button>        
+                                                                    
                                             </form>   
                                                                                     
                                                         </div>
@@ -191,8 +197,9 @@ class Account extends React.Component {
                                                     <label for="body">Body</label>
                                                     <textarea className="form-control" id="body" name="body" rows="4" value={item.body}></textarea>
                                                 </div>   
+                                                <button type="submit" class="btn btn-info">Submit Edit</button>
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Submit Edits</button>        
+                                                                    
                                             </form>   
                                                                                     
                                                         </div>

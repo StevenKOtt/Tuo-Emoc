@@ -5,6 +5,7 @@ class Login extends React.Component {
   render() {
     return (
       <Layout title="LOGIN">
+        <h1>Please Log-in to unlock Tuo-Emoc</h1>
       </Layout>
     );
   }

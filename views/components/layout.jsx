@@ -36,10 +36,10 @@ class Layout extends React.Component {
               <input type="text" class="form-control" name="username" placeholder="Username"></input>
           </div>
             <div class="col">
-              <input type="text" class="form-control" name="password" placeholder="Password"></input>
+              <input type="password" class="form-control" name="password" placeholder="Password"></input>
             </div>
             <div class="col">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-success">Sign in</button>
             </div>
           </div>
 

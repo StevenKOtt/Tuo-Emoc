@@ -10,13 +10,13 @@ class Forum extends React.Component {
         <div className ="container">
             <div className = "row">
                 <div className = "col">
-                    <div className ="display-4">
+                    <div className ="display-4 sectionShadow">
                         Forums
                     </div>
                 </div>
                 <div className ="col">
                 <button type="button" id="submit-post" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Submit Post
+                    New Post
                 </button>
 
                 
@@ -24,7 +24,7 @@ class Forum extends React.Component {
                     <div class="modal-dialog">
                         <div class="modal-content">
                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Create Post</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Create a New Post</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                             </button>
@@ -48,8 +48,9 @@ class Forum extends React.Component {
                         <label for="body">Body</label>
                         <textarea className="form-control" id="body" name="body" rows="4">Type text here</textarea>
                     </div>   
+                    <button type="submit" class="btn btn-info">Submit Post</button> 
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit Post</button>        
+                                 
                 </form>   
                                                         
                             </div>

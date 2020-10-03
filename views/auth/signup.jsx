@@ -4,7 +4,7 @@ const Layout = require("../components/layout.jsx");
 class Index extends React.Component {
   render() {
     return (
-      <Layout title="SIGNUP">
+      <Layout title="Sign-Up">
 
         <div className ="container">
           <div className="row">

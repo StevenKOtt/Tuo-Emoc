@@ -78,7 +78,7 @@ class Account extends React.Component {
                     </div>
                     <div className = "row">
                         <div className = "col">
-                            <div className = "forumTitle">Coming Out</div>
+                            <div className = "forumTitle">Coming Out<img id="catIcon" src="/img/comingout.png"></img></div>
                             <hr />
                     </div>
                         </div>
@@ -149,7 +149,7 @@ class Account extends React.Component {
                 
             <div className = "row">
                 <div class="col">
-                    <div className = "forumTitle forumCloseted">Closeted In</div>
+                    <div className = "forumTitle forumCloseted">Closeted In<img id="catIcon" src="/img/closetedin.png"></img></div>
                     <hr />
                 </div>
             </div>

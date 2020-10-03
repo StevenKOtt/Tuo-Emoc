@@ -21,6 +21,10 @@ li{
     margin-left: 15px;
 }
 
+.rules {
+    display:block;
+}
+
 header .container {
     background-image: linear-gradient(#edc7b7, #eee2DC);
     width: 100%;
@@ -100,6 +104,13 @@ hr {
     margin-bottom: -1%;
 }
 
+#forumIcon {
+    width: 30px;
+}
+#catIcon {
+    width: 25px;
+    margin-left: 1%;
+}
 
 /* Forum Post */
 

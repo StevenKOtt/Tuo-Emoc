@@ -5,7 +5,7 @@ class forumPostco extends React.Component {
   render() {
     const {aPost, index, forumCreator} = this.props
     return (
-        <Signed>
+        <Signed title={aPost.subject}>
         <div className = "container" id="postInfoFull">
             <div className = "row"> 
             {/* entire row of forum and profile */}
@@ -75,7 +75,7 @@ class forumPostco extends React.Component {
             </div>
             {/* COMMENT SECTION */}
             <div className = "row" id="commentsSection">
-            <h4 className="commentsHead">Comments</h4>
+            <h4 className="commentsHead">Comments<img id="catIcon" src="/img/comments.png"></img></h4>
                     <ul id='commentList'>
                     {aPost.comments.map((item, index) => {
                                     return (

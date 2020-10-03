@@ -11,7 +11,7 @@ class Forum extends React.Component {
             <div className = "row">
                 <div className = "col">
                     <div className ="display-4 sectionShadow">
-                        Forums
+                        Forums <img id="forumIcon" src="/img/forum.png"></img>
                     </div>
                 </div>
                 <div className ="col">
@@ -46,7 +46,7 @@ class Forum extends React.Component {
                     </div> 
                     <div className="form-group">
                         <label for="body">Body</label>
-                        <textarea className="form-control" id="body" name="body" rows="4">Type text here</textarea>
+                        <textarea className="form-control" id="body" name="body" rows="4" placeholder="Type text here"></textarea>
                     </div>   
                     <button type="submit" class="btn btn-info">Submit Post</button> 
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -76,7 +76,7 @@ class Forum extends React.Component {
 {/* COMING OUT STORIES */}
             <div className = "row">
                 <div className = "col">
-                    <div className = "forumTitle">Coming Out</div>
+                    <div className = "forumTitle">Coming Out<img id="catIcon" src="/img/comingout.png"></img></div>
                     <hr />
                 </div>
             </div>
@@ -106,7 +106,7 @@ class Forum extends React.Component {
             </div>
             <div className = "row ">
                 <div class="col">
-                    <div className = "forumTitle forumCloseted">Closeted In</div>
+                    <div className = "forumTitle forumCloseted">Closeted In<img id="catIcon" src="/img/closetedin.png"></img></div>
                     <hr />
                 </div>
             </div>

@@ -4,7 +4,7 @@ const Signed = require("../components/Signed.jsx");
 class Home extends React.Component {
   render() {
     return (
-      <Signed title="The Title!">
+      <Signed title="Home">
         <div className ="container">
           <div className ="row">
             <div className ="col">
@@ -30,7 +30,12 @@ class Home extends React.Component {
             <div className = "col">
              <div className ="section sectionShadow">
               <h3>Rules</h3>
-              <p>Info about Profile</p>
+              <ul>
+              <li className="rules">No Spam / Advertising / Self-promote in the forums. ...</li>
+              <li className="rules">Do not post copyright-infringing material. ...</li>
+              <li className="rules">Do not post “offensive” posts, links or images. ...</li>
+              <li className="rules">Remain respectful of other members at all times.</li>
+              </ul>
               </div>
             </div>
         </div>

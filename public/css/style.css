@@ -32,8 +32,8 @@ header .container {
 }
 
 .logo{
-    width: 25%;
-    filter: drop-shadow(0 0 0.25rem purple);
+    width: 30%;
+    filter: drop-shadow(0 0 0.25rem lightpink);
 }
 
 nav {
@@ -47,6 +47,10 @@ nav {
 .jumbotron {
     filter: drop-shadow(0 0 0.25rem black);
 
+}
+
+#lovePhoto {
+    width: 40%;
 }
 
 .sectionShadow {

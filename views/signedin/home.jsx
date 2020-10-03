@@ -16,6 +16,14 @@ class Home extends React.Component {
             </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col">
+              <img id="lovePhoto" className="sectionShadow" src="/img/love.jpg"></img>
+            </div>
+            <div className ="col">
+            <img id="lovePhoto" className="sectionShadow" src="/img/flag.jpg"></img>
+            </div>
+          </div>
           <div className = "row">
           
             <div className = "col">

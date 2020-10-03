@@ -5,9 +5,7 @@ const comingoutSchema = new mongoose.Schema({
   user: {type: String, required: true },
   subject: {type: String, required: true },
   body: {type: String, required: true },
-  comments: [{ body: String, user: String, commentDate: Date }],
-  identity: {type: String, required: true },
-  age: {type: Number, required: false}
+  comments: [{ body: String, user: String, commentDate: Date }]
 },
 { timestamps: { createdAt: 'created_at' }});
 

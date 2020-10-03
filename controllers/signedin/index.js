@@ -5,6 +5,7 @@ const { Router } = require("express");
 const session = require("express-session");
 const comingOut = require("../../models/schemas/comingOut.js");
 const closetedIn = require("../../models/schemas/closetedIn.js");
+const User = require("../../models/auth/index.js");
 const auth = require("../authmiddleware");
 //const seed = require("../../models/seed/comingOut.js")
 ///////////////////////////////////////
@@ -20,6 +21,11 @@ const router = Router();
 //    res.redirect("/");
 // });
 //TEST ROUTE TO SHOW HOW AUTH MIDDLEWARE WORKS
+
+router.get("/", auth, (req, res) => {
+
+  res.render("signedin/home.jsx");
+});
 
 router.get("/home", auth, (req, res) => {
 
@@ -55,11 +61,16 @@ router.post("/forum", auth, (req, res) => {
 
 router.get("/forum/co/:id", auth, (req, res) => {
   comingOut.findById(req.params.id, (error, individual) => {
-  res.render("signedin/forumPostco.jsx", { 
-      aPost: individual,
-      index: req.params.id}
-      )
-  })
+    User.find({username: individual.user}, (err, forumCreator) => {
+      console.log(individual)
+      console.log(forumCreator)
+      res.render("signedin/forumPostco.jsx", { 
+        aPost: individual,
+        index: req.params.id,
+        forumCreator: forumCreator
+      }
+      )}
+  )})
 })
 
 //posting comment on coming out page
@@ -73,11 +84,16 @@ router.post("/forum/co/:id", auth, (req, res) => {
 
 router.get("/forum/ci/:id", auth, (req, res) => {
   closetedIn.findById(req.params.id, (error, individual) => {
-  res.render("signedin/forumPostci.jsx", { 
-      aPost: individual,
-      index: req.params.id}
-      )
-  })
+    User.find({username: individual.user}, (err, forumCreator) => {
+      console.log(individual)
+      console.log(forumCreator)
+      res.render("signedin/forumPostci.jsx", { 
+        aPost: individual,
+        index: req.params.id,
+        forumCreator: forumCreator
+      }
+      )}
+  )})
 })
 
 //posting comment on coming out page
@@ -86,6 +102,50 @@ router.post("/forum/ci/:id", auth, (req, res) => {
       res.redirect(`/forum/ci/${req.params.id}`)
   })
 })
+
+
+///////////////////////////////////////
+// My Account Page Routers
+///////////////////////////////////////
+
+router.get("/account", auth, (req, res) => {
+  comingOut.find({user: req.session.username}, (error, usersComingOut) => {
+    closetedIn.find({user: req.session.username}, (error, usersClosetedIn) => {
+      User.find({ username: req.session.username }, (err, userInfo) => {
+      console.log(userInfo);
+      res.render("signedin/account.jsx", {usersComingOut,usersClosetedIn, userInfo});
+    })})
+});
+
+//Delete Coming out//
+//////////
+router.get("/account/co/:id/delete", (req, res) => {
+  comingOut.findByIdAndRemove(req.params.id, (error, data) => {
+  res.redirect("/account");
+  })
+  });
+})
+
+//Delete Closeted In//
+//////////
+router.get("/account/ci/:id/delete", (req, res) => {
+  closetedIn.findByIdAndRemove(req.params.id, (error, data) => {
+  res.redirect("/account");
+  })
+  });
+
+  // //Update//
+router.put("/account/ci/:id/update", (req, res) => {
+  closetedIn.findByIdAndUpdate(req.params.id, req.body, (error, updatedProduct) => {
+  res.redirect(`/forum/ci/${req.params.id}`);
+  })
+  })
+
+  router.put("/account/co/:id/update", (req, res) => {
+    comingOut.findByIdAndUpdate(req.params.id, req.body, (error, updatedProduct) => {
+    res.redirect(`/forum/co/${req.params.id}`);
+    })
+    })
 
 
 ///////////////////////////////////////

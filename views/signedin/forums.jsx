@@ -43,22 +43,7 @@ class Forum extends React.Component {
                     <div className = "form-group">
                         <label for="subject">Subject</label>
                         <input type="text" name="subject" className="form-control" id="subject" placeholder="Subject here"/>
-                    </div>
-                    <div className = "form-group">
-                        <label for="identity">What do you identify as:</label>
-                        <select className="form-control" id="identity" type="text" name="identity">
-                            <option>Prefer not to say</option>
-                            <option>Gay</option>  
-                            <option>Bi</option>
-                            <option>Lesbian</option>
-                            <option>Queer</option>
-                            <option>Trans</option>  
-                        </select>
-                    </div>  
-                    <div className = "form-group">
-                        <label for="age">Age - Optional</label>
-                        <input type="number" name="age" className="form-control" id="age" placeholder="Age"/>
-                    </div>
+                    </div> 
                     <div className="form-group">
                         <label for="body">Body</label>
                         <textarea className="form-control" id="body" name="body" rows="4">Type text here</textarea>
@@ -94,7 +79,7 @@ class Forum extends React.Component {
                     <hr />
                 </div>
             </div>
-            <div className = "row">
+            <div className = "row sectionShadow">
                     <div className = "col">
                     <div className ="section forums">
                         <table className ="table table-striped table-bordered table-sm" id="dtBasicExample" cellSpacing="-3" width="100%">
@@ -102,7 +87,7 @@ class Forum extends React.Component {
                                 <tr>
                                     <th className="th-sm">Subject</th>
                                     <th className="th-sm">Comments</th>
-                                    <th className="th-sm">Identity</th>
+                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,7 +96,6 @@ class Forum extends React.Component {
                                         <tr>
                                             <td><a href = {`/forum/co/${item._id}`}>{item.subject}</a></td>
                                             <td>{item.comments.length}</td>
-                                            <td>{item.identity}</td>
                                         </tr>
                                     )})}
                             </tbody>
@@ -119,13 +103,13 @@ class Forum extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className = "row">
+            <div className = "row ">
                 <div class="col">
                     <div className = "forumTitle forumCloseted">Closeted In</div>
                     <hr />
                 </div>
             </div>
-            <div className = "row">
+            <div className = "row sectionShadow">
                  <div className = "col">
                     <div className ="section forums">
                         <table className ="table table-striped table-bordered table-sm" id="dtBasicExample" cellSpacing="-3" width="100%">
@@ -133,7 +117,7 @@ class Forum extends React.Component {
                                 <tr>
                                     <th className="th-sm">Subject</th>
                                     <th className="th-sm">Comments</th>
-                                    <th className="th-sm">Identity</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -142,7 +126,6 @@ class Forum extends React.Component {
                                         <tr>
                                             <td><a href = {`/forum/ci/${item._id}`}>{item.subject}</a></td>
                                             <td>{item.comments.length}</td>
-                                            <td>{item.identity}</td>
                                         </tr>
                                     )})}
                             </tbody>

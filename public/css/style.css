@@ -3,8 +3,10 @@ h1 {
 }
 
 body {
-    background-color: #edc7b7;
-    font-family: 'Lato
+    font-family: 'Lato';
+    background-image: url("../img/rainbow.png");
+    background-size: cover;
+    
 }
 /* HEADER */
 
@@ -27,6 +29,7 @@ header .container {
 
 .logo{
     width: 25%;
+    filter: drop-shadow(0 0 0.25rem purple);
 }
 
 nav {
@@ -36,6 +39,15 @@ nav {
 /* //////// */
 
 /* //Home// */
+
+.jumbotron {
+    filter: drop-shadow(0 0 0.25rem black);
+
+}
+
+.sectionShadow {
+    filter: drop-shadow(0 0 0.25rem black);
+}
 .aboutTuo {
     font-size: 20px;
     padding: 2%;
@@ -69,6 +81,8 @@ nav {
     margin-top: 3%;
 }
 
+
+
 .forums {
     font-size: 12px;
     margin-top: 2%;
@@ -91,6 +105,10 @@ hr {
 
 #postSubject {
     text-align: left;
+    font-size: 30px;
+    margin-bottom: 2%;
+
+    
 }
 #bodyField {
     background-color: white;
@@ -107,12 +125,16 @@ hr {
     background-color: #123C69;
     padding-top: 2%;
     padding-bottom: 2%;
+    opacity: .7;
+    border-radius: 5%;
 }
+
 
 #postInfo {
     background-color: #BAB2B5;
     margin-right: 2%;
     border: #ac3B61;
+    border-radius: 5%;
     border-style: dashed;
 }
 #profileIcon {
@@ -123,6 +145,77 @@ hr {
 
 /*  Comments */
 
-.aComment {
+#commentsSection {
     background-color: white;
+    width: 60%;
+    margin-top: 2%;
+    border-radius: 5%;
+    border: #123C69;
+    border-style: dotted;
+    margin-bottom: 2%;
 }
+
+#commentList {
+width: 100%;
+margin-left: 3%;
+margin-right: 3%;
+margin-bottom: 2%;
+}
+
+.commentsHead {
+    font-style: oblique;
+    margin: 1% auto;
+
+}
+
+.aComment {
+    margin-top: 1%;
+    background-color: black;
+    opacity: .5;
+    color: white;
+    border-radius: 25%;
+}
+
+#commentBox {
+    margin-top: 3%;
+    
+}
+
+.commentButton {
+    margin-bottom: 3%;
+}
+
+/*  Account Page */
+
+.forumOptionIcons {
+ width: 10%;
+}
+
+#topHeader {
+    font-size: 30px;
+    filter: drop-shadow(0 0 0.25rem blue);
+    width: 70%;
+    
+    margin: 3% auto;
+    color: white;
+    border-radius: 2%;
+    opacity: .5;
+}
+
+#accountFull {
+    margin-top: 5%;
+    margin-bottom: 3%;
+
+}
+#accountInfoAfter {
+    margin-left: 10%;
+}
+#accountInfo {
+    color: white;
+    background-color: #123C69;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5%;
+    margin: 3% auto;
+}
+
